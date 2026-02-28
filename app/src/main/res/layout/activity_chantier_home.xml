@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Logo OGEF_dz"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/chantier_title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtRootStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Projet : non défini" />
+
+        <TextView
+            android:id="@+id/txtTrialInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="Il vous reste 90 jours d’essai."
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:background="#22FFA000"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnPickRootFolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="📁 CHOIX DU PROJET" />
+
+        <Button
+            android:id="@+id/btnNewProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="🆕 NOUVEAU PROJET" />
+
+        <Button
+            android:id="@+id/btnNewChantier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="🆕 Nouveau chantier" />
+
+        <TextView
+            android:id="@+id/txtChantiersTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Chantiers existants"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listChantiers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice" />
+
+        <Button
+            android:id="@+id/btnOpenChantier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:enabled="false"
+            android:text="📂 Ouvrir chantier" />
+
+        <Button
+            android:id="@+id/btnQuitChantierHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/quit_label" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="⚠️ Sécurité : pas de suppression de chantier depuis l’application."
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

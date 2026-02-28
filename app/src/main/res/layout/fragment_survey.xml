@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_survey" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:fillViewport="true">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+
+            <TextView android:id="@+id/bannerLeve" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#D32F2F" android:padding="10dp" android:text="GNSS NOT READY" android:textColor="@android:color/white" android:textStyle="bold" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:gravity="center_vertical">
+
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:contentDescription="Logo OGEF_dz" android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Levé" android:textSize="20sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/txtLeveLocked" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/leve_locked_message" android:textStyle="bold" android:visibility="gone" />
+
+            <TextView android:id="@+id/txtFixSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fix : ---" />
+
+            <TextView android:id="@+id/txtRecordStatusSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Prêt" />
+
+            <TextView android:id="@+id/txtFileNameSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Levé : ---" />
+
+            <TextView android:id="@+id/txtCounterSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Points : 0" />
+
+            <Button android:id="@+id/btnStationSetupSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="MISE EN STATION" />
+
+            <Button android:id="@+id/btnSavePointSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="ENREGISTRER POINT" />
+
+            <Button android:id="@+id/btnTopoPlanSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="PLAN TOPO" />
+
+            <Button android:id="@+id/btnVoiceSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="🎤 COMMANDES VOCALES" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchVoiceSurvey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Voix" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchSoundSurvey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:text="Son" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Langue commandes vocales" android:textStyle="bold" />
+
+                <Spinner android:id="@+id/spinnerVoiceLangMode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+
+                <EditText android:id="@+id/edtPointIdSurvey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="ID" />
+
+                <Button android:id="@+id/btnApplyIdSurvey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OK" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Type de point" android:textStyle="bold" />
+
+                <Spinner android:id="@+id/spinnerPointTypeSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <ImageButton android:id="@+id/btnNavPrevLeve" android:layout_width="40dp" android:layout_height="40dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Previous" android:elevation="8dp" android:padding="0dp" android:scaleType="fitCenter" android:scaleX="-1" android:translationZ="8dp" android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+
+                <ImageButton android:id="@+id/btnNavNextLeve" android:layout_width="40dp" android:layout_height="40dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Next" android:elevation="8dp" android:padding="0dp" android:scaleType="fitCenter" android:translationZ="8dp" android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <Button android:id="@+id/btnAntennaHeightSurvey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="HT" />
+
+                <Space android:layout_width="12dp" android:layout_height="wrap_content" />
+
+                <Button android:id="@+id/btnPrecisionSurvey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="PRÉCISION" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/txtPrecisionStatusSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Précision : ---" android:textSize="12sp" />
+
+            <Button android:id="@+id/btnQuitLeve" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+    

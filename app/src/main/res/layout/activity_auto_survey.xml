@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnAutoBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="@android:color/transparent"
+            android:contentDescription="Retour" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Levé auto"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Mode"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioAutoMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbAutoDist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance" />
+
+        <RadioButton
+            android:id="@+id/rbAutoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temps" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intervalle (m)" />
+
+        <EditText
+            android:id="@+id/inputAutoDist"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intervalle (s)" />
+
+        <EditText
+            android:id="@+id/inputAutoTime"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#DDDDDD" />
+
+    <CheckBox
+        android:id="@+id/chkAutoAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtre précision" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Max (m)" />
+
+        <EditText
+            android:id="@+id/inputAutoAcc"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkAutoSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Filtre vitesse" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Min (m/s)" />
+
+        <EditText
+            android:id="@+id/inputAutoSpeed"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="18dp">
+
+        <Button
+            android:id="@+id/btnAutoStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Démarrer" />
+
+        <Button
+            android:id="@+id/btnAutoPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Pause" />
+
+        <Button
+            android:id="@+id/btnAutoStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Stop" />
+    </LinearLayout>
+
+</LinearLayout>

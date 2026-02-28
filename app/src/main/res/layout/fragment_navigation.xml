@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_navigation" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="14dp">
+
+            <TextView android:id="@+id/bannerNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#D32F2F" android:padding="10dp" android:text="GNSS NOT READY" android:textColor="@android:color/white" android:textStyle="bold" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:gravity="center_vertical">
+
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:contentDescription="Logo OGEF_dz" android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Navigation" android:textSize="20sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/txtGnssStatusNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Statut GNSS : ---" />
+
+            <TextView android:id="@+id/txtSatellitesNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Satellites : ---" />
+
+            <TextView android:id="@+id/txtPrecisionNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Précision : ---" />
+
+            <TextView android:id="@+id/txtXinctNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="X : ---" />
+
+            <TextView android:id="@+id/txtYinctNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Y : ---" />
+
+            <TextView android:id="@+id/txtZinctNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Z : ---" />
+
+            <TextView android:id="@+id/txtSimulationNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Simulation : ---" />
+
+            <TextView android:id="@+id/txtActiveLeveNav" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Levé actif : ---" />
+
+            <TextView android:id="@+id/txtGnssSectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="GNSS &amp; SIMULATION" android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnScanGnss" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Scanner GNSS" android:hapticFeedbackEnabled="true" android:clickable="true" android:focusable="true" />
+
+            <Button android:id="@+id/btnConnectGnss" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Connecter GNSS" />
+
+            <Button android:id="@+id/btnDisconnectGnss" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Déconnecter GNSS" />
+
+            <Button android:id="@+id/btnSimToggle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Simulation ON" />
+
+            <TextView android:id="@+id/txtGnssListTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="GNSS détectés" android:textStyle="bold" />
+
+            <ListView android:id="@+id/listGnssDevices" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="6dp" android:layout_weight="1" android:choiceMode="singleChoice" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+
+                <ImageButton android:id="@+id/btnNavNextNavigation" android:layout_width="40dp" android:layout_height="40dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Next" android:elevation="8dp" android:padding="0dp" android:scaleType="fitCenter" android:translationZ="8dp" android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnQuitNavigation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+    

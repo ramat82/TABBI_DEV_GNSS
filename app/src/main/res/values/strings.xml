@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">dzalgerie_gnss</string>
+    <string name="survey_project_placeholder">Projet : ---</string>
+    <string name="survey_chantier_placeholder">Chantier : ---</string>
+    <string name="survey_leve_placeholder">Levé : ---</string>
+    <string name="survey_project_format">Projet : %1$s</string>
+    <string name="survey_chantier_format">Chantier : %1$s</string>
+    <string name="survey_leve_format">Levé : %1$s</string>
+    <string name="chantier_title">OGEF_dz — Gestion des Projets</string>
+    <string name="implantation_title">OGEF_dz — Implantation</string>
+    <string name="implantation_select_title">Sélectionner une cible</string>
+    <string name="implantation_no_target">Aucune cible disponible</string>
+    <string name="implantation_target_placeholder">Cible : ---</string>
+    <string name="implantation_current_placeholder">Actuel : ---</string>
+    <string name="implantation_target_inct_placeholder">Cible INCT : ---</string>
+    <string name="implantation_delta_placeholder">ΔX : ---  ΔY : ---  ΔZ : ---</string>
+    <string name="implantation_distance_placeholder">Dh : ---  D3 : ---</string>
+    <string name="choose_on_map_hint">Long press 2 seconds near a survey point to select it</string>
+    <string name="map_title_survey">Carte levé</string>
+    <string name="map_title_implantation">Carte implantation</string>
+    <string name="guidance_title">GUIDANCE</string>
+    <string name="guidance_forward">Guidance avant/arrière</string>
+    <string name="guidance_left">Guidance gauche/droite</string>
+    <string name="guidance_up_down">Guidance haut/bas</string>
+    <string name="guidance_compass">Flèche boussole</string>
+    <string name="leve_locked_message">No active levé. Please create or open a levé.</string>
+    <string name="quit_label">QUIT</string>
+</resources>

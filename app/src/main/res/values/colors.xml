@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="guid_ok">#2E7D32</color>
+    <color name="guid_approach">#F57C00</color>
+    <color name="guid_far">#6B6B6B</color>
+    <color name="guid_ni">#BDBDBD</color>
+    <color name="map_icon_blue">#1976D2</color>
+</resources>

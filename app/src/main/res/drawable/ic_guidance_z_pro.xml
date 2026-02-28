@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Bar at tip (TOP). Rotating 180° makes bar at bottom = perfect mirror. -->
+    <path
+        android:fillColor="#777777"
+        android:pathData="M3,2 H21 V5 H3 Z" />
+
+    <!-- Triangle -->
+    <path
+        android:fillColor="#777777"
+        android:pathData="M12,6 L22,20 L2,20 Z" />
+
+    <!-- Outlines -->
+    <path
+        android:pathData="M3,2 H21 V5 H3 Z"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.0"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M12,6 L22,20 L2,20 Z"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000" />
+</vector>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_gestion" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:fillViewport="true">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:contentDescription="Logo OGEF_dz" android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Gestion Levés" android:textSize="20sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/txtSurveyLeveName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/survey_leve_placeholder" android:textSize="14sp" />
+
+            <TextView android:id="@+id/txtSurveyCrsDisplay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="CRS affiché : ---" android:textSize="14sp" android:textStyle="bold" />
+
+            <Button android:id="@+id/btnCreateLeve" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Créer un levé" />
+
+            <Button android:id="@+id/btnOpenLeveSurvey" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ouvrir un levé" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnImportLeveGestion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="IMPORTER" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+                <ImageButton android:id="@+id/btnNavPrevGestion" android:layout_width="40dp" android:layout_height="40dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Previous" android:elevation="8dp" android:padding="0dp" android:scaleType="fitCenter" android:scaleX="-1" android:translationZ="8dp" android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+
+                <ImageButton android:id="@+id/btnNavNextGestion" android:layout_width="40dp" android:layout_height="40dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Next" android:elevation="8dp" android:padding="0dp" android:scaleType="fitCenter" android:translationZ="8dp" android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnExportDxfGestion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="📐 EXPORT DXF" />
+
+            <Button android:id="@+id/btnQuitGestion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+    

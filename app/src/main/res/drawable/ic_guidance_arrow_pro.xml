@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Filled chevron arrow (default points UP). Rotate ImageView for directions. -->
+    <path
+        android:fillColor="#777777"
+        android:pathData="M12,2 L22,14 L18.6,15.2 L12,9.4 L5.4,15.2 L2,14 Z" />
+
+    <!-- Inner cut -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,5 L18.2,13.2 L12,10.3 L5.8,13.2 Z" />
+
+    <!-- Outer outline -->
+    <path
+        android:pathData="M12,2 L22,14 L18.6,15.2 L12,9.4 L5.4,15.2 L2,14 Z"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000" />
+
+    <!-- Inner outline -->
+    <path
+        android:pathData="M12,5 L18.2,13.2 L12,10.3 L5.8,13.2 Z"
+        android:strokeColor="#222222"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000" />
+</vector>

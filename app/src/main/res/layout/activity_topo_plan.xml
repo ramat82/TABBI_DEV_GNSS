@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootTopoPlan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtTitleTopoPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Plan topo (X/Y) — sans carte"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBackTopoPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⬅ Retour" />
+        </LinearLayout>
+
+        <dz.ogefgef322.gnss.TopoPlanView
+            android:id="@+id/topoPlanView"
+            android:paddingBottom="180dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTopoToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#F0FFFFFF"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnToggleToolbar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#FFFFFF"
+                android:contentDescription="Déplier/replier"
+                android:src="@android:drawable/arrow_up_float" />
+
+            <TextView
+                android:id="@+id/txtTopoToolbarState"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Mode : VIEW"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTopoToolbarContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Ligne 1: classe + zoom -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnTopoClass"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:text="Classe : Clôture"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnZoomIn"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="10dp"
+                    android:text="+"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/btnZoomOut"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="10dp"
+                    android:text="−"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <!-- Ligne 2: actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnUndo"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="UNDO"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnFinish"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="TERMINER"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnExit"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="EXIT"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

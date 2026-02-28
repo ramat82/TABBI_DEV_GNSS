@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <ScrollView
+        android:id="@+id/screen_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/bannerNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D32F2F"
+                android:padding="10dp"
+                android:text="GNSS NOT READY"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Logo OGEF_dz"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Navigation"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtGnssStatusNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Statut GNSS : ---" />
+
+            <TextView
+                android:id="@+id/txtSatellitesNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Satellites : ---" />
+
+            <TextView
+                android:id="@+id/txtPrecisionNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Précision : ---" />
+
+            <TextView
+                android:id="@+id/txtXinctNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X : ---" />
+
+            <TextView
+                android:id="@+id/txtYinctNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Y : ---" />
+
+            <TextView
+                android:id="@+id/txtZinctNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Z : ---" />
+
+            <TextView
+                android:id="@+id/txtSimulationNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simulation : ---" />
+
+            <TextView
+                android:id="@+id/txtActiveLeveNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Levé actif : ---" />
+
+            <TextView
+                android:id="@+id/txtGnssSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="GNSS &amp; SIMULATION"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnScanGnss"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:text="Scanner GNSS"
+    android:hapticFeedbackEnabled="true"
+    android:clickable="true"
+    android:focusable="true"
+/>
+
+            <Button
+                android:id="@+id/btnConnectGnss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connecter GNSS" />
+
+            <Button
+                android:id="@+id/btnDisconnectGnss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Déconnecter GNSS" />
+
+            <Button
+                android:id="@+id/btnSimToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simulation ON" />
+
+            <TextView
+                android:id="@+id/txtGnssListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="GNSS détectés"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/listGnssDevices"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:choiceMode="singleChoice" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnNavNextNavigation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnQuitNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= PROGRAMMES TOPO ================= -->
+
+    <ScrollView
+        android:id="@+id/screen_programmes_topo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/bannerProgrammesTopo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#263238"
+                android:padding="12dp"
+                android:text="PROGRAMMES TOPO"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackProgrammesTopo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Retour"
+                android:hapticFeedbackEnabled="true" />
+
+            <GridLayout
+                android:id="@+id/gridProgrammesTopo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="3"
+                android:rowCount="4">
+
+                <!-- Row 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileLeve"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_leve"
+                            android:contentDescription="Levé" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Levé"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileEditPoints"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_edit_points"
+                            android:contentDescription="EDIT POINTS" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="EDIT POINTS"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileImplantPt"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_implant_pt"
+                            android:contentDescription="IMPLANT PT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="IMPLANT PT"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Row 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileIntersect"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_intersect"
+                            android:contentDescription="INTERSECT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="INTERSECT"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileRefLigne"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_ref_ligne"
+                            android:contentDescription="REF LIGNE" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="REF LIGNE"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileImplantLigne"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_implant_ligne"
+                            android:contentDescription="IMPLANT LIGNE" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="IMPLANT LIGNE"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Row 3 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tilePkDeport"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_pk_deport"
+                            android:contentDescription="PK/DÉPORT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="PK/DÉPORT"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileAuto"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_auto"
+                            android:contentDescription="AUTO" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="AUTO"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileSuperficie"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_superficie"
+                            android:contentDescription="SUPERFICIE" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="SUPERFICIE"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Row 4 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileTransfo2d"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_transfo2d"
+                            android:contentDescription="TRANSFO 2D" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="TRANSFO 2D"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileImport"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_import"
+                            android:contentDescription="IMPORT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="IMPORT"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tileExport"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/ic_program_export"
+                            android:contentDescription="EXPORT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="EXPORT"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= GESTION PROJET ================= -->
+
+    <ScrollView
+        android:id="@+id/screen_gestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Logo OGEF_dz"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Gestion Levés"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtSurveyLeveName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/survey_leve_placeholder"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtSurveyCrsDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="CRS affiché : ---"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCreateLeve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Créer un levé" />
+
+            <Button
+                android:id="@+id/btnOpenLeveSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ouvrir un levé" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImportLeveGestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="IMPORTER" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnNavPrevGestion"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Previous"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="-1"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnNavNextGestion"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExportDxfGestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="📐 EXPORT DXF" />
+
+            <Button
+                android:id="@+id/btnQuitGestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= LEVÉ ================= -->
+
+    <ScrollView
+        android:id="@+id/screen_survey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/bannerLeve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D32F2F"
+                android:padding="10dp"
+                android:text="GNSS NOT READY"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Logo OGEF_dz"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Levé"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtLeveLocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/leve_locked_message"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtFixSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fix : ---" />
+
+            <TextView
+                android:id="@+id/txtRecordStatusSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prêt" />
+
+            <TextView
+                android:id="@+id/txtFileNameSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Levé : ---" />
+
+            <TextView
+                android:id="@+id/txtCounterSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Points : 0" />
+
+            <Button
+                android:id="@+id/btnStationSetupSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="MISE EN STATION" />
+
+            <Button
+                android:id="@+id/btnSavePointSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ENREGISTRER POINT" />
+
+            <Button
+                android:id="@+id/btnTopoPlanSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="PLAN TOPO" />
+
+            <Button
+                android:id="@+id/btnVoiceSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="🎤 COMMANDES VOCALES" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchVoiceSurvey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voix" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchSoundSurvey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Son" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Langue commandes vocales"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerVoiceLangMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPointIdSurvey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="ID" />
+
+                <Button
+                    android:id="@+id/btnApplyIdSurvey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type de point"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerPointTypeSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnNavPrevLeve"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Previous"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="-1"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnNavNextLeve"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAntennaHeightSurvey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HT" />
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnPrecisionSurvey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PRÉCISION" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtPrecisionStatusSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Précision : ---"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnQuitLeve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= IMPLANTATION ================= -->
+
+    <ScrollView
+        android:id="@+id/screen_implantation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Logo OGEF_dz"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/implantation_title"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtImplantationLocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/leve_locked_message"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtImplantationCrsDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="CRS affiché : ---"
+                
+android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtImplantationMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="MODE : POINT"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutRefLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="#EEEEEE"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtRefLineSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ligne : (A) - (B)"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnChooseRefA"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CHOISIR A" />
+
+                    <Button
+                        android:id="@+id/btnChooseRefB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="CHOISIR B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Déport fixe (m) :"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtRefLineFixedOffset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:text="0" />
+
+                    <RadioGroup
+                        android:id="@+id/rgRefLineSide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbRefLineLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gauche"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/rbRefLineRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Droite" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSelectImplantationTarget"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="CHOISIR CIBLE" />
+
+            <Button
+                android:id="@+id/btnChooseTargetOnMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHOISIR SUR CARTE" />
+
+            <TextView
+                android:id="@+id/txtImplantationTargetSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/implantation_target_placeholder"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtImplantationCurrentInct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/implantation_current_placeholder" />
+
+            <TextView
+                android:id="@+id/txtImplantationTargetInct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/implantation_target_inct_placeholder" />
+
+            <TextView
+                android:id="@+id/txtImplantationDeltas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/implantation_delta_placeholder"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtImplantationDistances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/implantation_distance_placeholder"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtGuidanceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/guidance_title"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/layoutCompassArrow"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/imgCompassArrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/guidance_compass"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fleche_boussole" />
+
+                <TextView
+                    android:id="@+id/txtCompassDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:translationY="-2dp"
+                    android:text="NI"
+                    android:textColor="@color/guid_approach"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:shadowColor="#AA000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="2" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutGuidanceForward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgForward"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/guidance_forward"
+                    android:src="@drawable/ic_guidance_arrow_pro" />
+
+                <TextView
+                    android:id="@+id/txtForwardCm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="0.00 cm"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutGuidanceLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgLeft"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/guidance_left"
+                    android:src="@drawable/ic_guidance_arrow_pro" />
+
+                <TextView
+                    android:id="@+id/txtLeftCm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="0.00 cm"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutGuidanceUpDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgUpDown"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/guidance_up_down"
+                    android:src="@drawable/ic_guidance_z_pro" />
+
+                <TextView
+                    android:id="@+id/txtDzCm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="NI"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Tint/scale des icônes définis ici via scaleX/scaleY + tint. -->
+                <ImageButton
+                    android:id="@+id/btnNavPrevImplantation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Previous"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="-1"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnNavNextImplantation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnQuitImplantation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quit_label" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= CARTE ================= -->
+
+    <FrameLayout
+        android:id="@+id/screen_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="260dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/bannerMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D32F2F"
+                android:padding="8dp"
+                android:text="GNSS NOT READY"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Logo OGEF_dz"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    android:id="@+id/txtMapTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/map_title_survey"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMapStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/txtMapFix"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fix : ---"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMapRec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="REC ●"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtMapPrecision"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Précision : ---" />
+
+                        <TextView
+                            android:id="@+id/txtMapSats"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Sat : ---" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtMapInct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="INCT : ---" />
+
+                    <!-- Implantation-only -->
+                    <TextView
+                        android:id="@+id/txtMapTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Cible : ---"
+                        android:visibility="gone"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutMapDelta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtMapDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Distance : ---" />
+
+                        <TextView
+                            android:id="@+id/txtMapOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OK"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMapDelta2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtMapDeltaFB"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Avant/Arrière : ---" />
+
+                        <TextView
+                            android:id="@+id/txtMapDeltaLR"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Gauche/Droite : ---" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/txtMapLocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#CCFFFFFF"
+            android:padding="16dp"
+            android:text="@string/leve_locked_message"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/layoutMapActionsSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <!-- New bottom bar (Survey) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:baselineAligned="false">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapAddPoint"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Ajouter"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_add"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapCenterRover"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Centrer"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_mylocation"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapFollow"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Suivi"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_directions"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapToggleTrack"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Trace"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_share"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapMore"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Plus"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_more"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+                </LinearLayout>
+</LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMapActionsImplantation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+                <!-- New bottom bar (Implantation) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:baselineAligned="false">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapImplantCenterTarget"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Cible"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_myplaces"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapImplantCenterRover"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Rover"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_mylocation"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapImplantFollow"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Suivi"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_directions"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapImplantToggleCircle"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Tol."
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_crop"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMapImplantMore"
+                        style="@style/MapToolbarButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Plus"
+                        android:hapticFeedbackEnabled="true"
+                        app:icon="@android:drawable/ic_menu_more"
+                        app:iconGravity="textTop"
+                        app:iconPadding="6dp" 
+                        android:textSize="12sp" 
+                        android:textAllCaps="false" 
+                        android:maxLines="1" 
+                        android:ellipsize="end" 
+                        android:textColor="@android:color/white" 
+                        app:iconTint="@android:color/white" 
+                        app:backgroundTint="?attr/colorPrimary" 
+                        app:iconSize="20dp" 
+                        android:paddingTop="6dp" 
+                        android:paddingBottom="6dp" />
+                </LinearLayout>
+</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnNavPrevMap"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Previous"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="-1"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnNavNextMap"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next"
+                    android:elevation="8dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:translationZ="8dp"
+                    android:src="@drawable/fleche_terrain_soleil" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnQuitMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/quit_label" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
+
+<!-- OGEF_dz -->
